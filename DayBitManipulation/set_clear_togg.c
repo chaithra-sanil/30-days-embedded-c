@@ -14,7 +14,8 @@ int main(){
     scanf("%d", &num);
     scanf("%d",&pos);
     set = num | (1<<pos);
-    clear = num & (~(1<<pos));
+    clear = num & (~(1<<pos)); //here negation beacuse only change respecive bit if we an with the zero result will be 0
+                            //so keep all bits in number one after shifting 1 expect the bit 
     togg = num ^ (1<<pos);
     printf("set= %d, clear= %d, toggle= %d\n", set,clear,togg);
     binarydisp(set);
